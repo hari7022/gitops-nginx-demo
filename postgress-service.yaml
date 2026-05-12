@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
+<<<<<<< HEAD
   name: pg-test
   namespace: test-stateful
 spec:
@@ -10,3 +11,12 @@ spec:
   ports:
   - port: 5432
     targetPort: 5432
+=======
+  name: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+>>>>>>> 509fdb843dc0b4d7675f7f83203ebfb01c0dadda
