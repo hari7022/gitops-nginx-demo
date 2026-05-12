@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: .
+    path: postgres-gitops
     repoURL: https://github.com/hari7022/gitops-nginx-demo.git
     targetRevision: main
   syncPolicy:
