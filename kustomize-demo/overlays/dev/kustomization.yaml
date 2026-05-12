@@ -1,0 +1,8 @@
+resources:
+- ../../base
+
+namespace: nginx-dev
+
+replicas:
+- name: nginx-kustomize
+  count: 1
