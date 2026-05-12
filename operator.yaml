@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pg-operator-sim
+  namespace: test-stateful
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pg-operator-sim
+  template:
+    metadata:
+      labels:
+        app: pg-operator-sim
+    spec:
+      containers:
+      - name: operator
+        image: registry.redhat.io/openshift4/ose-cli:latest
+        command: ["/bin/bash","-c"]
+        args:
+        - |
+          while true; do
+            echo "Operator reconciling pg-test..."
+            sleep 30
+          done
